@@ -15,7 +15,8 @@
 	.page2 { background: url(images/page2-bcg.jpg);
 	background-size: 100% 100%;}
 
-	.page3 { background-color: ;}
+	.page3 { background: url(images/page3-bcg.jpg);
+	background-size: 100% 100%;}
 	.page4 { background-color: #f90;}
 	</style>
 <script src="js/jquery-1.9.0.min.js"></script>
@@ -36,6 +37,10 @@ window.onload=function(){
 		if(txt == "section page2 fp-section active"){
 			var list = document.getElementsByClassName("tip");
 			for(var i=0,len = list.length; i<len; i++){
+				// list[i].style.-webkit-animation = "moveLeft 0.8s ease-in-out 0.5s backwards";
+				// list[i].style.-moz-animation = "moveLeft 0.8s ease-in-out 0.5s backwards";
+				// list[i].style.-o-animation = "moveLeft 0.8s ease-in-out 0.5s backwards";
+				// list[i].style.-ms-animation = "moveLeft 0.8s ease-in-out 0.5s backwards";
 				list[i].style.animation = "moveLeft 0.8s ease-in-out 0.5s backwards";
 			}
 		}
@@ -48,13 +53,29 @@ window.onload=function(){
 		}
 		if(txt == "section page3 fp-section active"){
 			var basketball = document.getElementById("basketballC");
+			// basketball.style.-webkit-animation = "basketballShow 1.5s ease backwards";
+			// basketball.style.-moz-animation = "basketballShow 1.5s ease backwards";
+			// basketball.style.-o-animation = "basketballShow 1.5s ease backwards";
+			// basketball.style.-ms-animation = "basketballShow 1.5s ease backwards";
 			basketball.style.animation = "basketballShow 1.5s ease backwards";
-			var basketball = document.getElementById("programmingC");
-			basketball.style.animation = "programmingShow 1.5s ease backwards";
-			var basketball = document.getElementById("conanC");
-			basketball.style.animation = "conanShow 1.5s ease backwards";
-			var basketball = document.getElementById("photographyC");
-			basketball.style.animation = "photographyShow 1.5s ease backwards";
+			var programming = document.getElementById("programmingC");
+			// programming.style.-webkit-animation = "programmingShow 1.5s ease backwards";
+			// programming.style.-moz-animation = "programmingShow 1.5s ease backwards";
+			// programming.style.-o-animation = "programmingShow 1.5s ease backwards";
+			// programming.style.-ms-animation = "programmingShow 1.5s ease backwards";
+			programming.style.animation = "programmingShow 1.5s ease backwards";
+			var conan = document.getElementById("conanC");
+			// conan.style.-webkit-animation = "conanShow 1.5s ease backwards";
+			// conan.style.-moz-animation = "conanShow 1.5s ease backwards";
+			// conan.style.-o-animation = "conanShow 1.5s ease backwards";
+			// conan.style.-ms-animation = "conanShow 1.5s ease backwards";
+			conan.style.animation = "conanShow 1.5s ease backwards";
+			var photography = document.getElementById("photographyC");
+			// photography.style.-webkit-animation = "photographyShow 1.5s ease backwards";
+			// photography.style.-moz-animation = "photographyShow 1.5s ease backwards";
+			// photography.style.-o-animation = "photographyShow 1.5s ease backwards";
+			// photography.style.-ms-animation = "photographyShow 1.5s ease backwards";
+			photography.style.animation = "photographyShow 1.5s ease backwards";
 		}
 		}
 	
@@ -123,8 +144,18 @@ window.onload=function(){
 		</div>
 	</section>
 	<section class="section page4">
-		<p class="title">作品</p>
-		<img src="">
+		<h2>个人作品</h2>
+		<div class="photocon">
+			<img src="images/Tropical Beach1.jpg" class="picture">
+			<img src="" class="picture">
+			<img src="" class="picture">
+			<img src="" class="picture">
+			<img src="" class="picture">
+			<img src="" class="picture">
+		</div>
+	</section>
+	<section class="section paage5">
+		
 	</section>
 </div>
 
