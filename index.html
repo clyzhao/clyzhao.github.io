@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Myresume</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<base target="_blank"></base>
+	<link rel="stylesheet" href="css/onepage-scroll.css" />
+	<link rel="stylesheet" href="css/style1.css" />
+	<link rel="stylesheet" href="css/lightbox.css" />
+	<style>
+	.page1 { background: url(images/page1-bcg.jpg);
+	background-size: 100% 100%;}
+	.page2 { background: url(images/page2-bcg.jpg);
+	background-size: 100% 100%;}
+
+	.page3 { background-color: ;}
+	.page4 { background-color: #f90;}
+	</style>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery.onepage-scroll.min.js"></script>
+<script>
+$(function(){
+	$('.main').onepage_scroll({
+		sectionContainer: '.page',
+		pagination: false
+	});
+});
+
+window.onload=function(){
+	function page2Animation(){
+		var txt = document.getElementById("page2").className;
+		if(txt == "page page2 section"){
+			setTimeout(page2Animation,1000);
+		}
+		if(txt == "page page2 section active"){
+			var list = document.getElementsByClassName("tip");
+			for(var i=0,len = list.length; i<len; i++){
+				list[i].style.animation = "moveLeft 0.8s ease-in-out 0.5s backwards";
+			}
+		}
+	}
+
+	function page3Animation(){
+		var txt = document.getElementById("page3").className;
+		if(txt == "page page3 section"){
+			setTimeout(page3Animation,1000);
+		}
+		if(txt == "page page3 section active"){
+			var basketball = document.getElementById("basketballC");
+			basketball.style.animation = "basketballShow 1.5s ease backwards";
+			var basketball = document.getElementById("programmingC");
+			basketball.style.animation = "programmingShow 1.5s ease backwards";
+			var basketball = document.getElementById("conanC");
+			basketball.style.animation = "conanShow 1.5s ease backwards";
+			var basketball = document.getElementById("photographyC");
+			basketball.style.animation = "photographyShow 1.5s ease backwards";
+		}
+		}
+	
+	page2Animation();
+	page3Animation();
+}
+</script>
+</head>
+
+<body>
+<div class="main">
+	<section class="page page1">
+		<div class="wrap">
+		<div class="content">
+		<div class="photo"><a href="images/photo.jpg" data-lightbox="photo"><img src="images/photo.jpg" id="photo"></a></div>
+		<h1 id="myname">杨浩</h1>
+		<h2>It doesn't matter that knowing you are the worst<br> It matters that making some progress after konwing you are the worst</h2>
+		</div>
+		</div>
+	</section>
+<!-- page1 ended, page2 begin -->
+	<section class="page page2" id="page2">
+		<h2>个人资料：</h2>
+		<div class="introductionlist">
+		<ul>
+			<li>
+				<img src="icons/home.png" alt="home" class="icon"><a href="https://github.com/clyzhao" class="tip">github.com/clyzhao</a>
+			</li>
+			<li>
+				<img src="icons/location.png" alt="location" class="icon"><span class="tip">中国</span>
+			</li>
+			<li>
+				<img src="icons/birthday.png" alt="birthday" class="icon">
+				<span class="tip">1996.09.26</span>
+			</li>
+			<li>
+				<img src="icons/school.png" alt="school" class="icon"><a href="http://www.njupt.edu.cn/" class="tip">南京邮电大学</a>
+			</li>
+			<li>
+				<img src="icons/major.png" alt="major" class="icon"><span class="tip">计算机科学与技术</span>
+			</li>
+			<li>
+				<img src="icons/email.png" alt="email" class="icon"><a href="clyz.hao@gmail.com" class="tip">clyz.hao@gmail.com</a>
+			</li>
+		</ul>
+		</div>
+	</section>
+<!-- page2 ended, page3 begins -->
+	<section class="page page3" id="page3">
+		<h2>爱好:</h2>
+		<div class="hobby-chart">
+			<ul>
+				<li class="column" id="basketballC"></li>
+				<li class="column" id="conanC"></li>
+				<li class="column" id="programmingC"></li>
+				<li class="column" id="photographyC"></li>
+			</ul>
+		</div>
+		<div class="hobby-tip">
+			<ul>
+				<li class="kind" id="conanT">柯南</li>
+				<li class="kind" id="basketballT">篮球</li>
+				<li class="kind" id="programmingT">代码</li>
+				<li class="kind" id="photographyT">摄影</li>
+			</ul>
+		</div>
+	</section>
+	<section class="page page4">
+		<p class="title">作品</p>
+		<img src="">
+	</section>
+</div>
+
+
+<script src="js/lightbox.min.js"></script>
+</body>
+</html>
