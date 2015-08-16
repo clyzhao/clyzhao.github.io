@@ -170,6 +170,46 @@ body{
 	animation:moveLeft 0.8s ease-in-out 0.5s backwards;
 }
 */
+@-webkit-keyframes moveLeft{
+	0%{
+		transform: translateX(100px);
+		opacity: 0;	
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@-moz-keyframes moveLeft{
+	0%{
+		transform: translateX(100px);
+		opacity: 0;	
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@-o-keyframes moveLeft{
+	0%{
+		transform: translateX(100px);
+		opacity: 0;	
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@-ms-keyframes moveLeft{
+	0%{
+		transform: translateX(100px);
+		opacity: 0;	
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
 @keyframes moveLeft{
 	0%{
 		transform: translateX(100px);
