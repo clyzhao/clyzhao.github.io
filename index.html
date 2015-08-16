@@ -7,10 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<base target="_blank"></base>
 	<link rel="stylesheet" href="css/.jquery.fullPage.css" />
-	<link rel="stylesheet" href="css/style1.css" />
+	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/lightbox.css" />
 	<style>
-	.page1 { background: url(images/cybizhi2012_0420.jpg);
+	.page1 { background: url(images/page1-bcg.jpg);
 	background-size: 100% 100%;}
 	.page2 { background: url(images/page2-bcg.jpg);
 	background-size: 100% 100%;}
@@ -18,6 +18,10 @@
 	.page3 { background: url(images/page3-bcg.jpg);
 	background-size: 100% 100%;}
 	.page4 { background-color: #0066cc;}
+	.page5{background: url(images/page5-bcg.jpg);
+	background-size: 100% 100%;}
+	.page6{background: url(images/pray.jpg);
+	background-size: 100% 100%;}
 	</style>
 <script src="js/jquery-1.9.0.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
@@ -78,9 +82,26 @@ window.onload=function(){
 			photography.style.animation = "photographyShow 1.5s ease backwards";
 		}
 		}
+
+		function page6Animation(){
+			var txt = document.getElementById("page6").className;
+			if(txt == "section page6 fp-section"){
+			setTimeout(page6Animation,1000);
+			}
+			if(txt == "section page6 fp-section active"){
+				var list = document.getElementsByClassName("praytext");
+				for(var i=0,len=list.length; i<len; i++){
+					list[i].style.animation = "textAppear 10s ease backwards"
+				}
+
+				var mask = document.getElementById("mask");
+				mask.style.animation = "masklysis 10s ease backwards"
+			}
+		}		
 	
 	page2Animation();
 	page3Animation();
+	page6Animation();
 }
 </script>
 </head>
@@ -90,7 +111,7 @@ window.onload=function(){
 	<section class="section page1">
 		<div class="wrap">
 		<div class="content">
-		<div class="photo"><a href="images/photo.jpg" data-lightbox="photo"><img src="images/photo.jpg" id="photo"></a></div>
+		<div class="photo"><a href="images/photo.jpeg" data-lightbox="photo"><img src="images/photo.jpeg" id="photo"></a></div>
 		<h1 id="myname">杨浩</h1>
 		<h2>It doesn't matter that knowing you are the worst<br> It matters that making some progress after konwing you are the worst</h2>
 		</div>
@@ -105,7 +126,7 @@ window.onload=function(){
 				<img src="icons/home.png" alt="home" class="icon"><a href="https://github.com/clyzhao" class="tip">github.com/clyzhao</a>
 			</li>
 			<li>
-				<img src="icons/location.png" alt="location" class="icon"><span class="tip">中国</span>
+				<img src="icons/location.png" alt="location" class="icon"><span class="tip">山西运城</span>
 			</li>
 			<li>
 				<img src="icons/birthday.png" alt="birthday" class="icon">
@@ -118,7 +139,7 @@ window.onload=function(){
 				<img src="icons/major.png" alt="major" class="icon"><span class="tip">计算机科学与技术</span>
 			</li>
 			<li>
-				<img src="icons/email.png" alt="email" class="icon"><a href="clyz.hao@gmail.com" class="tip">clyz.hao@gmail.com</a>
+				<img src="icons/email.png" alt="email" class="icon"><a href="http://gmail.com" class="tip">clyz.hao@gmail.com</a>
 			</li>
 		</ul>
 		</div>
@@ -147,24 +168,33 @@ window.onload=function(){
 		<h2>最新关注：</h2>
 		<div class="attention-con">
 			<ul>
-				<li class="attention"><a href="">百度</a></li>
-				<li class="attention"><a href="">知乎</a></li>
-				<li class="attention"><a href="">谷歌</a></li>
-				<li class="attention"><a href="">百度</a></li>
-				<li class="attention"><a href="">知乎</a></li>
-				<li class="attention"><a href="">知乎</a></li>
+				<li class="attention"><a href="http://news.ifeng.com/a/20150814/44430154_0.shtml">南京森林音乐会</a></li>
+				<li class="attention"><a href="http://www.zhihu.com/question/34514116/answer/58978888">天津塘沽发生的爆炸是怎么回事？</a></li>
+				<li class="attention"><a href="http://www.zhihu.com/question/27830729">怎样搭配才能显得腿长？</a></li>
+				<li class="attention"><a href="http://www.w3ctech.com/topic/979">MobileWeb 适配总结</a></li>
+				<li class="attention"><a href="http://36kr.com/p/5036437.html">Local Brewing：帮技术宅挑选啤酒</a></li>
+				<li class="attention"><a href="http://www.zhihu.com/question/33724782">水平极高的出租车司机有多神奇的驾技？</a></li>
 			</ul>
 		</div>
 	</section>
 	<section class="section page5">
+		<div class="mask">
 		<h2>个人作品</h2>
 		<div class="photo-con">
-			<!-- <a href="images/Tropical Beach1.jpg" data-lightbox="picture"><img src="images/Tropical Beach1.jpg" class="picture"></a>
-			<a href="images/page3-bcg.jpg" data-lightbox="picture"><img src="images/page3-bcg.jpg" class="picture"></a> -->
-			<img src="" class="picture">
-			<img src="" class="picture">
-			<img src="" class="picture">
-			<img src="" class="picture">
+			<a href="images/picture1.jpg" data-lightbox="picture"><img src="images/picture1.jpg" class="picture"></a>
+			<a href="images/picture2.jpg" data-lightbox="picture"><img src="images/picture2.jpg" class="picture"></a>
+			<a href="images/picture3.jpg" data-lightbox="picture"><img src="images/picture3.jpg" class="picture"></a>
+			<a href="images/picture4.jpg" data-lightbox="picture"><img src="images/picture4.jpg" class="picture"></a>
+			<a href="images/picture5.jpg" data-lightbox="picture"><img src="images/picture5.jpg" class="picture"></a>
+			<a href="images/picture6.jpg" data-lightbox="picture"><img src="images/picture6.jpg" class="picture"></a>
+		</div>
+		<div class="clear"></div>
+		</div>
+	</section>
+	<section class="section page6" id="page6">
+		<div class="mask" id="mask">
+			<div id="bigtext" class="praytext">愿安好</div>
+			<div class="footer">图片来源：人民网</div>
 		</div>
 	</section>
 </div>
